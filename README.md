@@ -26,7 +26,7 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
    3. `fig_states.m`: The states of the agents.
    4. `fig_error_pro.m`: The errors fo the formation controller.
    5. `fig_input.m`: The input of the formation controller.
-   6. `Animation.m`: The animation of the agents' movement.
+   6. `Animation.m`: The animation of the agents' movement. (Run after finished `fig_states.m`)
 - Addition figures
    1. `fig_states_e.m`: The states of the estimator.
    2. `fig_vinput.m`: The virtual input of the estimator.
