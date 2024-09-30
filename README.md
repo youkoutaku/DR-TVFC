@@ -6,6 +6,12 @@ by **Guang-Ze Yang $^1$** and **Zi-Jiang Yang $^2$**
 
 This work has been accepted by 2024 63rd Annual Conference of SICE.
 
+### Description
+
+![](Framework.png)
+
+![](Conclusion.png)
+
 ---
 ## Program Description
 ### `config.m`
@@ -38,6 +44,8 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
 ```MATLAB
 build.m
 ```
+
+![](A.gif)
 
 ---
 
