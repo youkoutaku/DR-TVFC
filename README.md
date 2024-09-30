@@ -41,14 +41,15 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
    5. `fig_sliding.m`: The sliding variable.
 
 ## Running
-```MATLAB
+
+```matlab
 build.m
 ```
 
 ![](A.gif)
 
 ---
-
+## Update
 ### 2024-08-01
 The `Animation.m` program has been modified to make it easier to present.
 
