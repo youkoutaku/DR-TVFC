@@ -1,2 +1,28 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+*.py linguist-detectable
+*.ipymb linguist-detectable
+*.js linguist-detectable
+*.cpp linguist-detectable
+*.c linguist-detectable
+*.m linguist-detectable
+*.slx linguist-detectable
+*.tex linguist-detectable
+*.md linguist-detectable
+*.markdown linguist-detectable
+
+*.css linguist-vendored
+
+*.m linguist-language=Matlab
+*.slx linguist-language=Matlab
+
+*.tex linguist-language=Tex
+
+*.c linguist-language=C
+*.cpp linguist-language=C++
+
+*.md linguist-language=Markdown
+*.markdown linguist-language=Markdown
+
+*.py linguist-language=Python
+*.ipynb linguist-language=Python
+
