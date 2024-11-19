@@ -1,5 +1,10 @@
+%-------------------------------------------------------------------------------%
 % build.m
-
+% Build script for the formation control project
+% Author: Guangze-Yang
+% Date: 2024/06/29
+% https://youkoutaku.github.io/
+%-------------------------------------------------------------------------------%
 % Clear workspace and command window
 clear;
 close all;

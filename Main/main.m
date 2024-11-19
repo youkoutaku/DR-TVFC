@@ -3,6 +3,7 @@
 %                                                   2024/06/29 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
+% This is a simulation of time-varting formation control for MAS.               %
 %========================================%
 %           System Discretization
 %========================================%
@@ -114,9 +115,9 @@ for i = 1:N
     xv2(:, i, k+1) = xv2(:, i, k) + SampT * uv2(:, i, k);
 end
 %=======================================Position
-%estimation velocity error
+%estimation position error
 ev1(:, :, k) = xv1(:, :, k) - r1(:, k);
-%local estimation velocity error for leader
+%local estimation position error for leader
 evs1(:, :, k) = (xv1(:, :, k)- r1(:, k)) * C_B;
 for i = 1:N
     %local estimation error for neighbors
@@ -185,9 +186,9 @@ for k = 2:ndata+1
         xv2(:, i, k+1) = xv2(:, i, k) + SampT * uv2(:, i, k);
     end
     %=======================================Position
-    %estimation velocity error
+    %estimation Position error
     ev1(:, :, k) = xv1(:, :, k) - r1(:, k);
-    %local estimation velocity error for leader
+    %local estimation Position error for leader
     evs1(:, :, k) = (xv1(:, :, k)- r1(:, k)) * C_B;
     for i = 1:N
         %local estimation error for neighbors
@@ -252,19 +253,18 @@ for k = 2:ndata+1
         u(:, :, k) = un(:, :, k) + ur(:, :, k);
     end
     %Input limited
-    %Umax = 5;
-    %for j =1:n
-    %    if u(j, i, k) > Umax
-    %        u(j, i, k) = Umax;
-    %    end
-    %    if u(j, i, k) < -Umax
-    %        u(j, i, k) = -Umax;
-    %    end
-    %end
+    %{
+    Umax = 5;
+    for j =1:n
+        if u(j, i, k) > Umax
+            u(j, i, k) = Umax;
+        end
+        if u(j, i, k) < -Umax
+            u(j, i, k) = -Umax;
+        end
+    end
+    %}
     
     %Update State
     X(:, :, k+1) = X(:, :, k) + SampT * (Ao * X(:, :, k) + Bo * (u(:, :, k) + d(:, :, k)));
-    
-    %For mistakes
-    %X(:, 6, k+1) = X(:, 6, k+1) + SampT * [2; 2; 0; 0; 0; 0];
 end
