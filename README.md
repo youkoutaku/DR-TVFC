@@ -6,6 +6,8 @@ by **Guang-Ze Yang $^1$** and **Zi-Jiang Yang $^2$**
 
 This work has been accepted by 2024 63rd Annual Conference of SICE.
 
+**G. -Z. Yang** and Z. -J. Yang, "Distributed Robust Time-Varying Formation Control of Multi-Agent Systems Under Disturbances," 2024 SICE Festival with Annual Conference (SICE FES), Kochi City, Japan, 2024, pp. 1000-1005. [[IEEE Xplore]](https://ieeexplore.ieee.org/document/10805135) [[Code]](https://github.com/youkoutaku/DR-TVFC)
+
 ### Description
 
 ![](Framework.png)
