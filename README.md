@@ -77,5 +77,20 @@ The prescribed time modification function to formation tracking errors in SMFC.
 Sliding mode formation controller(SMFC) for Centralized leader-follower is introduced.
 
 ---
+
+```
+@INPROCEEDINGS{10805135,
+  author={Yang, Guang-Ze and Yang, Zi-Jiang},
+  booktitle={2024 SICE Festival with Annual Conference (SICE FES)}, 
+  title={Distributed Robust Time-Varying Formation Control of Multi-Agent Systems Under Disturbances}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1000-1005},
+  keywords={Decentralized control;Formation control;Stability analysis;Robustness;Regulation;Topology;Time-varying systems;Optimization;Multi-agent systems;Convergence;multi-agent systems;distributed control;time-varying formation control;sliding mode control},
+  doi={}}
+```
+
+---
 1. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan; Tel: +81-294-38-5205; E-mail: 24nm499s@vc.ibaraki.ac.jp
 2. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan;Tel: +81-294-38-5205; E-mail: shikoh.yoh.zijiang@vc.ibaraki.ac.jp
