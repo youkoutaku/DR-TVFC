@@ -14,7 +14,6 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
 
 ![](Conclusion.png)
 
----
 ## Program Description
 ### `config.m`
 - System Parameters and control parameters.
@@ -50,7 +49,6 @@ build.m
 
 ![](A.gif)
 
----
 ## Update
 ### 2024-08-01
 The `Animation.m` program has been modified to make it easier to present.
@@ -76,11 +74,6 @@ The prescribed time modification function to formation tracking errors in SMFC.
 ### 2023-07-30
 Sliding mode formation controller(SMFC) for Centralized leader-follower is introduced.
 
----
-
-1. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan; Tel: +81-294-38-5205; E-mail: 24nm499s@vc.ibaraki.ac.jp
-2. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan;Tel: +81-294-38-5205; E-mail: shikoh.yoh.zijiang@vc.ibaraki.ac.jp
-
 ## Citation
 If you use the code in your research, please consider citing:
 ```
@@ -91,3 +84,7 @@ If you use the code in your research, please consider citing:
   year={2024},
   pages={1000-1005},
 ```
+
+1. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan; Tel: +81-294-38-5205; E-mail: 24nm499s@vc.ibaraki.ac.jp
+2. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan;Tel: +81-294-38-5205; E-mail: shikoh.yoh.zijiang@vc.ibaraki.ac.jp
+
