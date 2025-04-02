@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------------------%
-%                    Time-varting Formation Control for MAS                     %
+%                    Time-varying Formation Control for MAS                     %
 %                                                   2024/06/29 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
@@ -51,9 +51,9 @@ Ao = [0, 0, 0, 1, 0, 0;
     0, 0, 0, 0, 0, 0;
     0, 0, 0, 0, 0, 0;
     0, 0, 0, 0, 0, 0; ];
-%Satae-space demension
+%State-space dimension
 no = size(Ao, 1);
-%Space demension
+%Space dimension
 n = no/2;
 
 Bo = [0, 0, 0;
@@ -62,7 +62,7 @@ Bo = [0, 0, 0;
     1, 0, 0;
     0, 1, 0;
     0, 0, 1; ];
-%input demensions
+%input dimensions
 p = size(Bo, 2);
 
 Co = [1, 0, 0, 0, 0, 0;
@@ -122,6 +122,6 @@ eta(1:10) = 7;
 %Gain of robust control is more lager, input will more lager and chattering.
 %Gain of robust control is more small, input will more small but divergent.
 
-%Smooth functon parameters
+%Smooth function parameters
 sigma(1:10) = 0.01;
 %================================================================================%

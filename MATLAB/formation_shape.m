@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------------------%
-%                    Time-varting Formation Control for MAS                     %
+%                    Time-varying Formation Control for MAS                     %
 %                                                   2024/06/29 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
@@ -33,10 +33,10 @@ for k = 1:2
     p1(:,10, k) = 2.5 * Rp * [cos(-pi * 3/4); sin(- pi * 3/4); 0];
 end
 %========================================%
-%           Time-varting Formation
+%           Time-varying Formation
 %========================================%
 t_c = 10; %formation time
-t_t = 10; %Time-varting Time
+t_t = 10; %Time-varying Time
 for k = 2:ndata+1
     if k*SampT <= t_c
         ap = [0; 0; 0];

@@ -1,9 +1,9 @@
 %-------------------------------------------------------------------------------%
-%                    Time-varting Formation Control for MAS                     %
+%                    Time-varying Formation Control for MAS                     %
 %                                                   2024/06/29 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
-% This is a simulation of time-varting formation control for MAS.               %
+% This is a simulation of time-varying formation control for MAS.               %
 %========================================%
 %           System Discretization
 %========================================%
@@ -34,14 +34,14 @@ d = zeros(n, N, ndata + 1);
 %========================================%
 %globle estimation of reference position
 xv1 = zeros(n, N, ndata + 1);
-%globle estimation of reference veocity
+%globle estimation of reference velocity
 xv2 = zeros(n, N, ndata + 1);
 %----input of estimator ----
 uv1 = zeros(n, N, ndata + 1);
 uv2 = zeros(n, N, ndata + 1);
-%leader postion info
+%leader position info
 r1 = zeros(n, ndata + 1);
-%leader veocity info
+%leader velocity info
 r2 = zeros(n, ndata + 1);
 %========================================%
 %           modification of error
@@ -56,13 +56,13 @@ dd_xi= zeros(n, N, ndata + 1);
 %========================================%
 %Sliding variable
 s  = zeros(n, N, ndata + 1);
-%inpur fo nominal control
+%input fo nominal control
 un = zeros(n, N, ndata + 1);
 %input of robust control
 ur = zeros(n, N, ndata + 1);
-%input of modificatory error
+%input of modification error
 um = zeros(n, N, ndata + 1);
-%smooth functon
+%smooth function
 Delta   = zeros(n, N, ndata + 1);
 Delta_1 = zeros(n, N, ndata + 1);
 Delta_2 = zeros(n, N, ndata + 1);
@@ -88,7 +88,7 @@ xv2(:, :, 1) =  xi2(:, :, 1);
 r1(:, k) = x01(:, k);
 r2(:, k) = x02(:, k);
 
-%estmition inital
+%estimation initial
 xv1(:, :, 1) =  xi1(:, :, 1);
 for i = 1:N
     xv2(:, i, 1) =  xi2(:, i, 1) + [0.1; 0.1; 0.1];
@@ -103,7 +103,7 @@ for i = 1:N
     for K = 1:N
         evs2(:, i, k) = evs2(:, i, k) + C_A(i, K) * (xv2(:, i, k) - xv2(:, K, k));
     end
-    %smooth functon
+    %smooth function
     for j = 1:n
         Delta_2(j, i, k) = evs2(j, i, k) / (abs(evs2(j, i, k)) + sigma(i));
     end
@@ -124,7 +124,7 @@ for i = 1:N
     for K = 1:N
         evs1(:, i, k) = evs1(:, i, k) + C_A(i, K) * (xv1(:, i, k) - xv1(:, K, k));
     end
-    %smooth functon
+    %smooth function
     for j = 1:n
         Delta_1(j, i, k) = evs1(j, i, k) / (abs(evs1(j, i, k)) + sigma(i));
     end
@@ -174,7 +174,7 @@ for k = 2:ndata+1
         for K = 1:N
             evs2(:, i, k) = evs2(:, i, k) + C_A(i, K) * (xv2(:, i, k) - xv2(:, K, k));
         end
-        %smooth functon
+        %smooth function
         for j = 1:n
             Delta_2(j, i, k) = evs2(j, i, k) / (abs(evs2(j, i, k)) + sigma(i));
         end
@@ -195,7 +195,7 @@ for k = 2:ndata+1
         for K = 1:N
             evs1(:, i, k) = evs1(:, i, k) + C_A(i, K) * (xv1(:, i, k) - xv1(:, K, k));
         end
-        %smooth functon
+        %smooth function
         for j = 1:n
             Delta_1(j, i, k) = evs1(j, i, k) / (abs(evs1(j, i, k)) + sigma(i));
         end
@@ -216,7 +216,7 @@ for k = 2:ndata+1
     ei2(:, :, k) = Y(4:6, :, k) - xv2(:, :, k) - p2(:, :, k);
     if t(k) > Tfv
         %================================================%
-        %      Prescried time medification function
+        %      Prescribed time modification function
         %================================================%
         for i = 1:N
             if t(k) < TF
@@ -235,13 +235,13 @@ for k = 2:ndata+1
         %medication of formation error
         emi1(:, :, k) = ei1(:, :, k) - xi(:, :, k);
         emi2(:, :, k) = ei2(:, :, k) - d_xi(:, :, k);
-        %Sliding moder variable
+        %Sliding mode variable
         s(:, :, k) = emi1(:, :, k) * diag(c) + emi2(:, :, k);
         %input of medication error
         um(:, :, k) = d_xi(:, :, k) * diag(c) + dd_xi(:, :, k);
         %input of normal control
         un(:, :, k) = - ei2(:, :, k) * diag(c) + um(:, :, k) - s(:, :, k) * diag(ki);
-        %smooth funciton
+        %smooth function
         for i = 1:N
             for j = 1:n
                 Delta(j, i, k) = s(j, i, k) / (abs(s(j, i, k)) + sigma(i));

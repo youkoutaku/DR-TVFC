@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------------------%
-%                    Time-varting Formation Control for MAS                     %
+%                    Time-varying Formation Control for MAS                     %
 %                                                   2024/08/02 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
@@ -21,7 +21,7 @@ handles = [[],[]];
 for k = 1:10*T3D:ndata
     view(-12.7, 47.3);
     
-    %delat the past frame
+    %delete the past frame
     if k > 10*T3D
         delete(handles(:,k-10*T3D)); % 前のフレームで描画した点を削除
     end

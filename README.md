@@ -10,9 +10,9 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
 
 ### Description
 
-![](Framework.png)
+![](/Image/Framework.png)
 
-![](Conclusion.png)
+![](/Image/Conclusion.png)
 
 ## Program Description
 ### `config.m`
@@ -47,32 +47,9 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
 build.m
 ```
 
-![](A.gif)
+![](/Image/3D.png)
 
-## Update
-### 2024-08-01
-The `Animation.m` program has been modified to make it easier to present.
-
-### 2024-06-25
-Globalize the state of the agents to use matrix computation instead of loops.
-
-### 2023-03-11
-Collision avoidance for MAS. (To be continued)
-
-### 2024-01-21
-The time-varying formation shape is realized using the SMFC algorithm.
-
-### 2023-11-26
-The distributed state estimation for consensus tracking control is introduced to  estimate the leader’s states.
-
-### 2023-11-06
-Trying to introduced the NN for disturbances. (Unsuccess)
-
-### 2023-09-08
-The prescribed time modification function to formation tracking errors in SMFC.
-
-### 2023-07-30
-Sliding mode formation controller(SMFC) for Centralized leader-follower is introduced.
+![](/Image/Animation.gif)
 
 ## Citation
 If you use the code in your research, please consider citing:

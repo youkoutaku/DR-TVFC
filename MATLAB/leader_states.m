@@ -1,5 +1,5 @@
 %-------------------------------------------------------------------------------%
-%                    Time-varting Formation Control for MAS                     %
+%                    Time-varying Formation Control for MAS                     %
 %                                                   2024/06/29 by Guang-Ze Yang %
 % https://youkoutaku.github.io/                                                 %
 %-------------------------------------------------------------------------------%
