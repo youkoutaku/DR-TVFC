@@ -1,3 +1,5 @@
+
+
 ## DR-TVFC(Distributed Robust Time-Varying Formation Control) of MASs under Disturbances
 
 by **Guang-Ze Yang $^1$** and **Zi-Jiang Yang $^2$**
@@ -31,7 +33,7 @@ This work has been accepted by 2024 63rd Annual Conference of SICE.
    1. `fig_motion.m`: 3D plotting of the agents' movement.
    2. `fig_error_e.m`: The errors of the estimator.
    3. `fig_states.m`: The states of the agents.
-   4. `fig_error_pro.m`: The errors fo the formation controller.
+   4. `fig_error_pro.m`: The errors of the formation controller.
    5. `fig_input.m`: The input of the formation controller.
    6. `Animation.m`: The animation of the agents' movement. (Run after finished `fig_states.m`)
 - Addition figures
@@ -64,4 +66,3 @@ If you use the code in your research, please consider citing:
 
 1. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan; Tel: +81-294-38-5205; E-mail: 24nm499s@vc.ibaraki.ac.jp
 2. Department of Mechanical Systems Engineering, Ibaraki University, Hitachi, Japan;Tel: +81-294-38-5205; E-mail: shikoh.yoh.zijiang@vc.ibaraki.ac.jp
-
